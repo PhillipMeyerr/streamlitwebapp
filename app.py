@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load the trained model
-model_path = 'heart_data/heart_disease_rf_model.pkl'  # Adjust path if needed
+model_path = 'heart_data/heart_disease_model.pkl'  
 model = joblib.load(model_path)
 
 st.title("Heart Disease Prediction")
