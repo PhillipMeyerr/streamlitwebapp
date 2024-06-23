@@ -54,9 +54,6 @@ input_data = {
 # Convert the dictionary to a DataFrame
 input_df = pd.DataFrame([input_data])
 
-# Display the input DataFrame for debugging purposes
-st.write("Input Data:", input_df)
-
 # Make a prediction
 if st.button("Predict"):
     prediction = model.predict(input_df)
