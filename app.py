@@ -55,7 +55,7 @@ input_data = {
 input_df = pd.DataFrame([input_data])
 
 # Display the input DataFrame for debugging purposes
-st.write("Input Data:", input_df)
+#st.write("Input Data:", input_df)
 
 # Make a prediction
 if st.button("Predict"):
