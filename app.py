@@ -33,26 +33,29 @@ input_data = {
     'thalach': thalach,
     'oldpeak': oldpeak,
     'sex_1': sex,
-    'cp_1': 1 if cp == 1 else 0,
-    'cp_2': 1 if cp == 2 else 0,
-    'cp_3': 1 if cp == 3 else 0,
+    'cp_1': 1 if cp == "atypical angina" else 0,
+    'cp_2': 1 if cp == "non-angina pain" else 0,
+    'cp_3': 1 if cp == "asymptomatic" else 0,
     'fbs_1': fbs,
-    'restecg_1': 1 if restecg == 1 else 0,
-    'restecg_2': 1 if restecg == 2 else 0,
+    'restecg_1': 1 if restecg == "abnormal" else 0,
+    'restecg_2': 1 if restecg == "ventricular hypertrophy" else 0,
     'exang_1': exang,
-    'slope_1': 1 if slope == 1 else 0,
-    'slope_2': 1 if slope == 2 else 0,
+    'slope_1': 1 if slope == "flat" else 0,
+    'slope_2': 1 if slope == "downsloping" else 0,
     'ca_1': 1 if ca == 1 else 0,
     'ca_2': 1 if ca == 2 else 0,
     'ca_3': 1 if ca == 3 else 0,
     'ca_4': 1 if ca == 4 else 0,
-    'thal_1': 1 if thal == 1 else 0,
-    'thal_2': 1 if thal == 2 else 0,
-    'thal_3': 1 if thal == 3 else 0
+    'thal_1': 1 if thal == "fixed defect" else 0,
+    'thal_2': 1 if thal == "reversible defect" else 0,
+    'thal_3': 1 if thal == "unknown" else 0
 }
 
 # Convert the dictionary to a DataFrame
 input_df = pd.DataFrame([input_data])
+
+# Display the input DataFrame for debugging purposes
+st.write("Input Data:", input_df)
 
 # Make a prediction
 if st.button("Predict"):
